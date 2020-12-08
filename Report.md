@@ -4,9 +4,13 @@
 
 ## Team - 
 - Keshvi Srivastava     652825616
-- Sneha Mysore Suresh   .........
+- Sneha Mysore Suresh   677216079
 
 ### 1. Introduction
+
+Social media platforms, such as Facebook and Twitter, have not only changed the way we interact with one another but also the way we share news and comment on world events.Twitter has become an increasingly relevant tool in domestic and international politics. The platform has become a way to promote policies and interact with citizens and other officials.Sentiment analysis of Twitter data is becoming a popular research area. 
+
+In this project we built models for classifying tweets about Obama and Romney during the presidential debate from 2012 into positive, negative and neutral sentiments.
 
 ### 2. Dataset and pre-processing
 
