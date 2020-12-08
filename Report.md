@@ -38,7 +38,24 @@ Obama -
 ### 3. Visualisation
 
 Word clouds
+OBAMA
+<img src="images/obama_neg.png" style="zoom:100%" />
+<img src="images/obama_neut.png" style="zoom:100%" />
+<img src="images/obama_pos.png" style="zoom:100%" />
+ROMNEY
+<img src="images/romney_neg.png" style="zoom:100%" />
+<img src="images/romney_neut.png" style="zoom:100%" />
+<img src="images/romney_pos.png" style="zoom:100%" />
+
 Top 50 negative, neutral and positive words
+OBAMA
+<img src="images/obama_neg_count.png" style="zoom:100%" />
+<img src="images/obama_neut_count.png" style="zoom:100%" />
+<img src="images/obama_pos_count.png" style="zoom:100%" />
+ROMNEY
+<img src="images/romney_neg_count.png" style="zoom:100%" />
+<img src="images/romney_neut_count.png" style="zoom:100%" />
+<img src="images/romney_pos_count.png" style="zoom:100%" />
 
 ### 4. Model tried
 
