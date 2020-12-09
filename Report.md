@@ -22,7 +22,7 @@ Tweet Pre-processing -
 
 Cleaning the data to remove irrelevant words and character is a big part of text classification. We studied our data to identify what problems exist within it. We applied standard tweet pre-processor cleaning libraries but those were not enough. To compensate for the remaining dirty data, we have done additional cleaning. All the cleaning processes are given below:
 
-1. Tweet pre-processing class (tweet-preprocessor) removes:  
+1. Tweet pre-processing class (tweet-preprocessor) removes: 
       a. URLs
       b. Hashtags
       c. Mentions
@@ -45,7 +45,7 @@ For data visualisation we studied the Obama and Romney word clouds and Top 50 wo
 
 ### 4. Models tried
 
-1. TextBlob : TextBlob is a python library and offers a simple API to access its methods and perform basic NLP tasks. A good thing about TextBlob is that they are just like python strings. So, you can transform and play with it same like we did in python
+1. TextBlob : TextBlob is a python library to perform basic NLP tasks. It predicts text sentiment based on built-in knowledge.
 2. Logistic Regression
 3. Linear SVC
 4. LinearSVC with L1-based feature selection
@@ -58,13 +58,11 @@ For data visualisation we studied the Obama and Romney word clouds and Top 50 wo
 11. Ensemble : LogisticRegression, LinearSVC, MultinomialNB, RidgeClassifier, PassiveAggressiveClassifier
 12. Doc2Vec + Linear regression : Doc2Vec uses a 3 layered shallow deep neural network to gauge the context of the document and relate similar context phrases together. Different variations of Doc2Vec used Distributed Bag Of Words(DBOW), Distributed Memory Concatenation(DMC), Distributed Memory Mean(DMM)
 
-Tfid Vectorizer : TF-IDF Vectorizer converts documents to a matrix of TF-IDF (term frequency - inverse document frequency) features. We fed the following parameters to the tfid vectorizer - (n_features=100000,ngram_range=(1,3),stop_words=None). This matrix is fed to the above models for sentiment prediction.
+Tfid Vectorizer : TF-IDF Vectorizer converts documents to a matrix of TF-IDF (term frequency - inverse document frequency) features. We fed the following parameters to the it - (n_features=100000,ngram_range=(1,3),stop_words=None). This matrix is fed to the above models for sentiment prediction.
 
 **OBAMA**
 
-Training set:   5342
-
-Test set:          282
+Training set:   5342,	Test set:  282
 
 |                 Models                     |    Accuracy   |
 |--------------------------------------------|:-------------:|
@@ -81,13 +79,9 @@ Test set:          282
 | Ensemble                                   |     60.78%    |
 | Doc2Vec                                    |     57.80%    |
 
-From the above table we can see that Ridge Classifier has the highest accuracy for the obama model.
-
 **ROMNEY**
 
-Training set:   5083
-
-Test set:          565
+Training set:   5083,	Test set:  565
 
 |                 Models                     |    Accuracy   |
 |--------------------------------------------|:-------------:|
@@ -102,13 +96,11 @@ Test set:          565
 | Perceptron                                 |     62.19%    |
 | Nearest Centroid                           |     60.07%    |
 | Ensemble                                   |     60.78%    |
-| Doc2Vec                                    |               |
-
-From the above table we can see that LinearSVC with L1-based feature selection has the highest accuracy for the romney model.
+| Doc2Vec                                    | 53.90% |
 
 ### 5. Results
 
-We played around with the above models and different ways of data pre-processing. Interestingly, these were our results:
+We studied the above models and applied different combinations of data pre-processing. Interestingly the accuracy of the Romney model improved by not removing the stop words or doing lemmatization on the tweets. These were our final results:
 
 |                     |               Obama                          |                      Romney                  |
 |---------------------|:--------------------------------------------:|:--------------------------------------------:|
@@ -125,9 +117,6 @@ We played around with the above models and different ways of data pre-processing
 |     Class -1        |                 0.61                         |                        0.72                  |
 |  **Weighted Accuracy**  |                 0.67                         |                        0.63                  |
 
-Interestingly the accuracy of the Romney model improved by not removing the stop words or doing lemmatization on the tweets.
-
 ### 6. Conclusion
 
 In this project, we experimented with various models for the tweet classification. We noticed that since twitter data is inconsistent - some tweets may include emojis, special characters and stop words related to tweets (@,#,RT) - data preprocessing was a crucial step before applying any of the models. We tried a range of other models including simple classifiers, emsemble techniques and neural network models. Since the dataset was relatively small, the deep neural network models we tried (Doc2Vec with it's vaiations) did not yeild great results.Finally, *Ridge Classifier* gave us the best results for Obama data and *Linear SVC with feature selection* gave us the best results for Romney data.
-
