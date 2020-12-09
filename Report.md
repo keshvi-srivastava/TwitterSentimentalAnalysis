@@ -72,7 +72,7 @@ On visualising the data, we observed that for both Obama and Romney the two resp
 
 ### 4. Models tried
 
-1. TextBlob - TextBlob is a python library and offers a simple API to access its methods and perform basic NLP tasks. A good thing about TextBlob is that they are just like python strings. So, you can transform and play with it same like we did in python
+1. TextBlob : TextBlob is a python library and offers a simple API to access its methods and perform basic NLP tasks. A good thing about TextBlob is that they are just like python strings. So, you can transform and play with it same like we did in python
 2. Logistic Regression
 3. Linear SVC
 4. LinearSVC with L1-based feature selection
@@ -83,7 +83,7 @@ On visualising the data, we observed that for both Obama and Romney the two resp
 9. Perceptron
 10. Nearest Centroid
 11. Ensemble : LogisticRegression, LinearSVC, MultinomialNB, RidgeClassifier, PassiveAggressiveClassifier
-12. Doc2Vec : <Add some info>
+12. Doc2Vec + Linear regression : Doc2Vec uses a 3 layered shallow deep neural network to gauge the context of the document and relate similar context phrases together. Different variations of Doc2Vec used Distributed Bag Of Words(DBOW), Distributed Memory Concatenation(DMC), Distributed Memory Mean(DMM)
 
 Tfid Vectorizer : TF-IDF Vectorizer converts documents to a matrix of TF-IDF (term frequency - inverse document frequency) features. We fed the following parameters to the tfid vectorizer - (n_features=100000,ngram_range=(1,3),stop_words=None). This matrix is fed to the above models for sentiment prediction.
 
@@ -106,7 +106,7 @@ Test set:          282
 | Perceptron                                 |     60.64%    |
 | Nearest Centroid                           |     59.93%    |
 | Ensemble                                   |     60.78%    |
-| Doc2Vec                                    |               |
+| Doc2Vec                                    |     57.80%    |
 
 From the above table we can see that Ridge Classifier has the highest accuracy for the obama model.
 
@@ -131,7 +131,7 @@ Test set:          565
 | Ensemble                                   |     60.78%    |
 | Doc2Vec                                    |               |
 
-From the above table we can see that LinearSVC with L1-based feature selection has the highest accuracy for the obama model.
+From the above table we can see that LinearSVC with L1-based feature selection has the highest accuracy for the romney model.
 
 ### 5. Results
 
@@ -156,9 +156,5 @@ Interestingly the accuracy of the Romney model improved by not removing the stop
 
 ### 6. Conclusion
 
-Issues with neural network
-Data processing problems
-Special characters
-Emojis
-Identifying special words (eg. RT)
+In this project, we experimented with various models for the tweet classification. We noticed that since twitter data is inconsistent - some tweets may include emojis, special characters and stop words related to tweets (@,#,RT) - data preprocessing was a crucial step before applying any of the models. We tried a range of other models including simple classifiers, emsemble techniques and neural network models. Since the dataset was relatively small, the deep neural network models we tried (Doc2Vec with it's vaiations) did not yeild great results.Finally, *Ridge Classifier* gave us the best results for Obama data and *Linear SVC with feature selection* gave us the best results for Romney data.
 
