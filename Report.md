@@ -94,6 +94,10 @@ Tfid Vectorizer : TF-IDF Vectorizer converts documents to a matrix of TF-IDF (te
 
 **OBAMA**
 
+Training set:   5342
+
+Test set:       282
+
 |                 Models                     |    Accuracy   |  
 |--------------------------------------------|:-------------:|
 | TextBlob                                   |      43%      |
@@ -112,6 +116,10 @@ Tfid Vectorizer : TF-IDF Vectorizer converts documents to a matrix of TF-IDF (te
 From the above table we can see that Ridge Classifier has the highest accuracy for the obama model.
 
 **ROMNEY**
+
+Training set:   5083
+
+Test set:       565
 
 |                 Models                     |    Accuracy   |  
 |--------------------------------------------|:-------------:|
@@ -134,15 +142,28 @@ From the above table we can see that LinearSVC with L1-based feature selection h
 
 We played around with the above models and different ways of data pre-processing. Interestingly, these were our results:
 
-Obama   - stop words and lemmatization included
-
-        - model selected  -> Ridge Classifier
-      
-Romney  - stop words and lemmatization not included
-
-        - model selected  -> Linear SVC with feature selection
+|                     |               Obama                          |                      Romney                  | 
+|---------------------|:--------------------------------------------:|:--------------------------------------------:|
+|  Pre-processing     |    stop words and lemmatization included     |  stop words and lemmatization not included   |
+|      Model          |            Ridge Classifier                  | Linear SVC with feature selection            |
+|    **Precision**        |
+|     Class 1         |                 0.64                         |                        0.61                  |
+|     Class -1        |                 0.69                         |                        0.65                  |
+|    **Recall**           |                                              |                                              |
+|     Class 1         |                 0.75                         |                        0.59                  |
+|     Class -1        |                 0.75                         |                        0.81                  |
+|    **F1 Score**         |                                              |                                              |
+|     Class 1         |                 0.58                         |                        0.60                  |
+|     Class -1        |                 0.61                         |                        0.72                  |
+|  **Weighted Accuracy**  |                 0.67                         |                        0.63                  |
 
 Interestingly the accuracy of the Romney model improved by not removing the stop words or doing lemmatization on the tweets.
 
 ### 6. Conclusion
  
+Issues with neural network
+Data processing problems
+Special characters
+Emojis
+Identifying special words (eg. RT)
+
