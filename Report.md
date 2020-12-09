@@ -3,7 +3,7 @@
 ## Term - Fall 2020
 
 ## Team - 
-- Keshvi Srivastava     652825616
+- Keshvi Srivastava           652825616
 - Sneha Mysore Suresh   677216079
 
 ### 1. Introduction
@@ -14,20 +14,15 @@ In this project we built models for classifying tweets about Obama and Romney du
 
 ### 2. Dataset and pre-processing
 
-Obama - 
-  Total              -> 7196 tweets
-  Removing Class 2   -> 5624 tweets
-  
-Romney -
-  Total               -> 7200 tweets
-  Removing Class 2    -> 5648 tweets
-  
+Obama -  Total : 7196 tweets, Removing Class 2  : 5624 tweets
+
+Romney -Total : 7200 tweets, Removing Class 2  : 5648 tweets
+
 Tweet Pre-processing -
- 
+
 Cleaning the data to remove irrelevant words and character is a big part of text classification. We studied our data to identify what problems exist within it. We applied standard tweet pre-processor cleaning libraries but those were not enough. To compensate for the remaining dirty data, we have done additional cleaning. All the cleaning processes are given below:
 
-1. Tweet pre-processing class (tweet-preprocessor)
-    Removes:  
+1. Tweet pre-processing class (tweet-preprocessor) removes:  
       a. URLs
       b. Hashtags
       c. Mentions
@@ -46,20 +41,20 @@ Cleaning the data to remove irrelevant words and character is a big part of text
 
 ### 3. Data Visualisation
 
-On visualising the data, we observed that for both Obama and Romney the two respective names occur the most in their respective tweets, whether positive, negative or neutral. Also, a lot of words tend to overlap in the different classes of tweets which made it very difficult to use 'bag of words' for our classification models. 
+On visualising the data, we observed that for both Obama and Romney the two respective names occur the most in their respective word clouds, whether positive, negative or neutral. Also, a lot of words tend to overlap in the different classes of tweets which made it very difficult to use 'bag of words' for our classification models due to very small number of unique words. 
 
 **I. Word clouds**
 **OBAMA**
 
-<img src="images/obama_neg.png" width="425" /> Obama Negative Word Cloud
-<img src="images/obama_neut.png" width="425" /> Obama Neutral Word Cloud
-<img src="images/obama_pos.png" width="425" /> Obama Positive Word Cloud
+<img src="images/obama_neg.png" width="400" /> Obama Negative Word Cloud
+<img src="images/obama_neut.png" width="400" /> Obama Neutral Word Cloud
+<img src="images/obama_pos.png" width="400" /> Obama Positive Word Cloud
 
 **ROMNEY**
 
-<img src="images/romney_neg.png" width="425" /> Romney Negative Word Cloud
-<img src="images/romney_neut.png" width="425" /> Romney Neutral Word Cloud
-<img src="images/romney_pos.png" width="425" /> Romney Positive Word Cloud
+<img src="images/romney_neg.png" width="400" /> Romney Negative Word Cloud
+<img src="images/romney_neut.png" width="400" /> Romney Neutral Word Cloud
+<img src="images/romney_pos.png" width="400" /> Romney Positive Word Cloud
 
 **II. Top 50 negative, neutral and positive words**
 
@@ -96,9 +91,9 @@ Tfid Vectorizer : TF-IDF Vectorizer converts documents to a matrix of TF-IDF (te
 
 Training set:   5342
 
-Test set:       282
+Test set:          282
 
-|                 Models                     |    Accuracy   |  
+|                 Models                     |    Accuracy   |
 |--------------------------------------------|:-------------:|
 | TextBlob                                   |      43%      |
 | Logistic Regression                        |     63.12%    |
@@ -119,9 +114,9 @@ From the above table we can see that Ridge Classifier has the highest accuracy f
 
 Training set:   5083
 
-Test set:       565
+Test set:          565
 
-|                 Models                     |    Accuracy   |  
+|                 Models                     |    Accuracy   |
 |--------------------------------------------|:-------------:|
 | TextBlob                                   |      43%      |
 | Logistic Regression                        |     58.30%    |
@@ -142,7 +137,7 @@ From the above table we can see that LinearSVC with L1-based feature selection h
 
 We played around with the above models and different ways of data pre-processing. Interestingly, these were our results:
 
-|                     |               Obama                          |                      Romney                  | 
+|                     |               Obama                          |                      Romney                  |
 |---------------------|:--------------------------------------------:|:--------------------------------------------:|
 |  Pre-processing     |    stop words and lemmatization included     |  stop words and lemmatization not included   |
 |      Model          |            Ridge Classifier                  | Linear SVC with feature selection            |
@@ -160,7 +155,7 @@ We played around with the above models and different ways of data pre-processing
 Interestingly the accuracy of the Romney model improved by not removing the stop words or doing lemmatization on the tweets.
 
 ### 6. Conclusion
- 
+
 Issues with neural network
 Data processing problems
 Special characters
