@@ -1,4 +1,4 @@
-# TwitterSentimentalAnalysis
+# Twitter Sentimental Analysis
 # Course - CS 583 (Data Mining and Text Mining)
 # Term - Fall 2020
 
