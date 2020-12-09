@@ -10,7 +10,7 @@
 
 Social media platforms, such as Facebook and Twitter, have not only changed the way we interact with one another but also the way we share news and comment on world events.Twitter has become an increasingly relevant tool in domestic and international politics. The platform has become a way to promote policies and interact with citizens and other officials.Sentiment analysis of Twitter data is becoming a popular research area. 
 
-In this project we built models for classifying tweets about Obama and Romney during the presidential debate from 2012 into positive, negative and neutral sentiments.
+In this project we built models for classifying tweets about Obama and Romney during the presidential debate from 2012 into positive, negative and neutral sentiments. We have studied various approaches to work with tweet analysis which are explained below. Our study excludes class '2' tweets which come under the category of sarcasm detection.
 
 ### 2. Dataset and pre-processing
 
@@ -24,9 +24,9 @@ Romney -
   
 Tweet Pre-processing -
  
- 1. Remove stop words -> added 'RT' as a stop word to the list as it was not relevant (it stands for retweet)
- 2. Lemmatization
- 3. Tweet pre-processing class (tweet-preprocessor)
+Cleaning the data to remove irrelevant words and character is a big part of text classification. We studied our data to identify what problems exist within it. We applied standard tweet pre-processor cleaning libraries but those were not enough. To compensate for the remaining dirty data, we have done additional cleaning. All the cleaning processes are given below:
+
+1. Tweet pre-processing class (tweet-preprocessor)
     Removes:  
       a. URLs
       b. Hashtags
@@ -35,14 +35,18 @@ Tweet Pre-processing -
       e. Emojis 
       f. Smileys
       g. JSON and .txt file support
-4. Remove unicode smileys
-5. remove html tags
-6. remove punctuations
-7. Remove white space
-8. Split negative words
-9. Remove unicodes
+2. Remove explicit character specified smileys
+3. Remove html tags
+4. Remove punctuations
+5. Remove white space
+6. Split negative words such as 'don't' to 'do not'. This turns the data into a uniform format which does not have a mixture of shortened words and their split words. It also highlights the negative words such as 'not'.
+7. Remove unicodes
+8. Remove stop words -> Apart from the standard nltk library stop words, we also added 'RT' as a stop word to the list (it stands for retweet and was not removed by the tweet pre-processor because it did not follow '@' in the tweets)
+9. Lemmatization
 
 ### 3. Data Visualisation
+
+On visualising the data, we observed that for both Obama and Romney the two respective names occur the most in their respective tweets, whether positive, negative or neutral. Also, a lot of words tend to overlap in the different classes of tweets which made it very difficult to use 'bag of words' for our classification models. 
 
 **I. Word clouds**
 **OBAMA**
@@ -84,9 +88,9 @@ Tweet Pre-processing -
 9. Perceptron
 10. Nearest Centroid
 11. Ensemble : LogisticRegression, LinearSVC, MultinomialNB, RidgeClassifier, PassiveAggressiveClassifier
-12. Doc2Vec
+12. Doc2Vec : <Add some info>
 
-Tfid Vectorizer : 
+Tfid Vectorizer : TF-IDF Vectorizer converts documents to a matrix of TF-IDF (term frequency - inverse document frequency) features. We fed the following parameters to the tfid vectorizer - (n_features=100000,ngram_range=(1,3),stop_words=None). This matrix is fed to the above models for sentiment prediction.
 
 **OBAMA**
 
@@ -128,6 +132,7 @@ From the above table we can see that LinearSVC with L1-based feature selection h
 
 ### 5. Results
 
+We played around with the above models and different ways of data pre-processing. Interestingly, these were our results:
 
 Obama   - stop words and lemmatization included
 
@@ -137,6 +142,7 @@ Romney  - stop words and lemmatization not included
 
         - model selected  -> Linear SVC with feature selection
 
+Interestingly the accuracy of the Romney model improved by not removing the stop words or doing lemmatization on the tweets.
+
 ### 6. Conclusion
  
-  
