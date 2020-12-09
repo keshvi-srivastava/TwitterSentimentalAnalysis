@@ -15,6 +15,7 @@ Contains all the tried and tested methods for the project. Read report for more 
 1. Visualisation & multiple model comparison.ipynb
 2. Obama model comparison.ipynb
 3. Romney model comparison.ipynb
+4. Doc2Vec Obama Test.py
 
 # Python Files
 
