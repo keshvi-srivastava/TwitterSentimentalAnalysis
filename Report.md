@@ -16,7 +16,7 @@ In this project we built models for classifying tweets about Obama and Romney du
 
 Obama -  Total : 7196 tweets, Removing Class 2  : 5624 tweets
 
-Romney -Total : 7200 tweets, Removing Class 2  : 5648 tweets
+Romney - Total : 7200 tweets, Removing Class 2  : 5648 tweets
 
 Tweet Pre-processing -
 
@@ -41,34 +41,7 @@ Cleaning the data to remove irrelevant words and character is a big part of text
 
 ### 3. Data Visualisation
 
-On visualising the data, we observed that for both Obama and Romney the two respective names occur the most in their respective word clouds, whether positive, negative or neutral. Also, a lot of words tend to overlap in the different classes of tweets which made it very difficult to use 'bag of words' for our classification models due to very small number of unique words. 
-
-**I. Word clouds**
-**OBAMA**
-
-<img src="images/obama_neg.png" width="400" /> Obama Negative Word Cloud
-<img src="images/obama_neut.png" width="400" /> Obama Neutral Word Cloud
-<img src="images/obama_pos.png" width="400" /> Obama Positive Word Cloud
-
-**ROMNEY**
-
-<img src="images/romney_neg.png" width="400" /> Romney Negative Word Cloud
-<img src="images/romney_neut.png" width="400" /> Romney Neutral Word Cloud
-<img src="images/romney_pos.png" width="400" /> Romney Positive Word Cloud
-
-**II. Top 50 negative, neutral and positive words**
-
-**OBAMA**
-
-<img src="images/obama_neg_count.png" width="425" /> Obama Negative Word Count
-<img src="images/obama_neut_count.png" width="425" /> Obama Neutral Word Count
-<img src="images/obama_pos_count.png" width="425" /> Obama Positive Word Count
-
-**ROMNEY**
-
-<img src="images/romney_neg_count.png" width="425" /> Romney Negative Word Count
-<img src="images/romney_neut_count.png" width="425" /> Romney Neutral Word Count
-<img src="images/romney_pos_count.png" width="425" /> Romney Positive Word Count
+For data visualisation we studied the Obama and Romney word clouds and Top 50 words of each class. We observed that for both Obama and Romney the two respective names occur the most in their respective word clouds, whether positive, negative or neutral. Also, a lot of words tend to overlap in the different classes of tweets which made it very difficult to use 'bag of words' for our classification models due to very small number of unique words.
 
 ### 4. Models tried
 
