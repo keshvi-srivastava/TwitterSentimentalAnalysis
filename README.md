@@ -3,7 +3,9 @@
 # Term - Fall 2020
 
 Team -
+
 Keshvi Srivastava 
+
 Sneha Mysore Suresh
 
 # Jupyter Files
@@ -11,8 +13,8 @@ Sneha Mysore Suresh
 Contains all the tried and tested methods for the project. Read report for more details.
 
 1. Visualisation & multiple model comparison.ipynb
-2. Obama model comparison
-3. Romney model comparison
+2. Obama model comparison.ipynb
+3. Romney model comparison.ipynb
 
 # Python Files
 
