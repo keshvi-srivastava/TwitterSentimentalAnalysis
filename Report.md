@@ -71,7 +71,6 @@ Training set:   5342,	Test set:  282
 | Linear SVC                                 |     63.48%    |
 | LinearSVC with L1-based feature selection  |     59.93%    |
 | Multinomial NB                             |     64.18%    |
-| Bernoulli NB                               |     58.51%    |
 | **Ridge Classifier**                       |   **64.54%**  |
 | AdaBoost                                   |     44.33%    |
 | Perceptron                                 |     60.64%    |
@@ -90,13 +89,12 @@ Training set:   5083,	Test set:  565
 | Linear SVC                                 |     62.54%    |
 | **LinearSVC with L1-based feature selection**  |     **63.25%**    |
 | Multinomial NB                             |     47.35%    |
-| Bernoulli NB                               |     44.52%    |
 | Ridge Classifier                           |     60.78%    |
 | AdaBoost                                   |     50.88%    |
 | Perceptron                                 |     62.19%    |
 | Nearest Centroid                           |     60.07%    |
 | Ensemble                                   |     60.78%    |
-| Doc2Vec                                    | 53.90% |
+| Doc2Vec                                    |     53.90%    |
 
 ### 5. Results
 
