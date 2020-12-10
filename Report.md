@@ -43,6 +43,25 @@ Cleaning the data to remove irrelevant words and character is a big part of text
 
 For data visualisation we studied the Obama and Romney word clouds and Top 50 words of each class. We observed that for both Obama and Romney the two respective names occur the most in their respective word clouds, whether positive, negative or neutral. Also, a lot of words tend to overlap in the different classes of tweets which made it very difficult to use 'bag of words' for our classification models due to very small number of unique words.
 
+**I. Word clouds**
+
+
+<img src="images/obama_neg.png" width="425" /> Obama Negative Word Cloud
+<img src="images/obama_neut.png" width="425" /> Obama Neutral Word Cloud
+<img src="images/obama_pos.png" width="425" /> Obama Positive Word Cloud
+<img src="images/romney_neg.png" width="425" /> Romney Negative Word Cloud
+<img src="images/romney_neut.png" width="425" /> Romney Neutral Word Cloud
+<img src="images/romney_pos.png" width="425" /> Romney Positive Word Cloud
+
+**II. Top 50 negative, neutral and positive words**
+
+<img src="images/obama_neg_count.png" width="425" /> Obama Negative Word Count
+<img src="images/obama_neut_count.png" width="425" /> Obama Neutral Word Count
+<img src="images/obama_pos_count.png" width="425" /> Obama Positive Word Count
+<img src="images/romney_neg_count.png" width="425" /> Romney Negative Word Count
+<img src="images/romney_neut_count.png" width="425" /> Romney Neutral Word Count
+<img src="images/romney_pos_count.png" width="425" /> Romney Positive Word Count
+
 ### 4. Models tried
 
 1. TextBlob : TextBlob is a python library to perform basic NLP tasks. It predicts text sentiment based on built-in knowledge.
